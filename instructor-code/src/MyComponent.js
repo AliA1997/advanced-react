@@ -1,22 +1,15 @@
 import React, { Component } from 'react';
-import { makeAwesome, withTime } from './hocs';
+import { makeAwesome, withTime, withData } from './hocs';
 
-class MyComponent extends Component {
+
+export class MyComponent extends Component {
   render() {
     return (
       <div>
-        <h2>
-          Is this component awesome?
-          {this.props.isAwesome ? 'You know it' : 'Nah'}
-        </h2>
-        <div>What time is it: {this.props.time}</div>
-        <div>
-          Here are all my props:
-          <pre>{JSON.stringify(this.props, null, 2)}</pre>
-        </div>
+        Here is the data: {this.props.data.myValue}
       </div>
-    );
+    )
   }
 }
 
-export default withTime(makeAwesome(MyComponent));
+export default withData(MyComponent, 'http://somedata.com/data');
