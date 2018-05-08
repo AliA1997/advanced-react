@@ -6,8 +6,8 @@ import MyButton from './MyButton';
 class App extends Component {
   render() {
     return (
-      <div >
-        <MyButton value={{a: 'Ali', b: 'Alhaddad', c: [1231232]}}/>
+      <div>
+        <MyButton  />
       </div>
     );
   }
