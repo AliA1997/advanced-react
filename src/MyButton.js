@@ -10,14 +10,7 @@ export default class MyButton extends Component {
     }
 }
 
-MyButton.propTypes = {
-    text: PropTypes.string,
-    value: PropTypes.shape({
-        a: Proptypes.number.isRequired,
-        b: PropTypes.string.isRequired,
-        c: PropTypes.arrayOf(PropTypes.number).isRequired
-    })
-}
+// s
 
 
 MyButton.defaultProps = {
